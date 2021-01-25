@@ -9,7 +9,31 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play pulse.</tw-noscript></noscript></tw-story>
-<tw-storydata name="pulse" startnode="1" creator="Twine" creator-version="2.3.10" ifid="24BC3730-9C3A-4666-BC5A-ECECDEF1375F" zoom="1" format="Harlowe" format-version="3.2.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#passage-four {
+<tw-storydata name="pulse" startnode="1" creator="Twine" creator-version="2.3.10" ifid="24BC3730-9C3A-4666-BC5A-ECECDEF1375F" zoom="1" format="Harlowe" format-version="3.2.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
+  background-color: #3D0D00 !important;
+}
+body {
+  background-color: #3D0D00 !important;
+}
+tw-link, .enchantment-link {
+    color: #FF781F;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+tw-link:hover, .enchantment-link:hover {
+    color: #ff51b7;
+}
+
+.visited {
+    color: #FF781F;
+}
+
+.visited:hover {
+    color: #ff51b7;
+}
+#passage-four {
   background: white;
 }
 #flex-container {
@@ -30,7 +54,7 @@
 }
 #flex-container tw-link {
   color: black;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="" position="573,179" size="100,100">&lt;!-- assigned sex at birth prompt --&gt;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="" position="572,179" size="100,100">&lt;!-- assigned sex at birth prompt --&gt;
 Please select your assigned sex at birth:
 (dropdown: 2bind $sex, &quot;Female&quot;, &quot;Male&quot;)
 [[begin]]
@@ -64,30 +88,30 @@ containing your parents’ expectations
 of who you’ll be.
 
 it’s too heavy
-[[$bagAction anyway-&gt;page two]]</tw-passagedata><tw-passagedata pid="3" name="page two" tags="" position="723,509" size="100,100">{(set: $chapterAge to 6)
+[[$bagAction anyway-&gt;page 2]]</tw-passagedata><tw-passagedata pid="3" name="page 2" tags="" position="724,510" size="100,100">{(set: $chapterAge to 6)
 &lt;!-- formula for year during passage --&gt;
 (set: $chapterYear to ($chapterAge + $birthYearInput))
-{(if:$sex is &quot;Female&quot;)[
+(if: $sex is &quot;Female&quot;)[
   (set: $oppositeGender to &quot;boy&quot;)
   (set: $oppositePronoun to &quot;him&quot;)
 ](else:)[
   (set: $oppositeGender to &quot;girl&quot;)
   (set: $oppositePronoun to &quot;her&quot;)
-]}}
+]}
 you’re $chapterAge years old
 the year is $chapterYear
 you just graduated from shapes and naps
 to cursive and reading
 
-you take yearbook
+you take your yearbook
 and flip through its’ pages
 until you find a $oppositeGender
 that seems ‘good enough’ for your ‘crush’
 
 do you actually like $oppositePronoun?
-[[yes-&gt;page three]]
-[[no-&gt;page three]]</tw-passagedata><tw-passagedata pid="4" name="page three" tags="" position="722,661" size="100,100">of course you do. don&#39;t be silly.
-[[continue-&gt;page four]]</tw-passagedata><tw-passagedata pid="5" name="page four" tags="" position="924,657" size="100,100">{(set: $chapterAge to 11)
+[[yes-&gt;page 3.1]]
+[[no-&gt;page 3]]</tw-passagedata><tw-passagedata pid="4" name="page 3" tags="" position="722,661" size="100,100">of course you do. don&#39;t be silly.
+[[continue-&gt;page 4]]</tw-passagedata><tw-passagedata pid="5" name="page 4" tags="" position="925,656" size="100,100">{(set: $chapterAge to 11)
 &lt;!-- formula for year during passage --&gt;
 (set: $chapterYear to ($chapterAge + $birthYearInput))}
 you&#39;re $chapterAge years old
@@ -107,37 +131,291 @@ what are you searching for?
 	&lt;img src=&quot;./img/google.png&quot; width=&quot;50%&quot;&gt;
 	(force-input-box: &quot;X=&quot;, 1, &quot;am i gay? quiz&quot;)
 	&lt;div id=&quot;button-container&quot;&gt;
-	  &lt;button&gt;[[search-&gt;page four.1]]&lt;/button&gt;&lt;button&gt;[[i&#39;m feeling lucky-&gt;page four.1]]&lt;/button&gt;
+	  &lt;button&gt;[[search-&gt;page 4.1]]&lt;/button&gt;&lt;button&gt;[[i&#39;m feeling lucky-&gt;page 4.1]]&lt;/button&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-]</tw-passagedata><tw-passagedata pid="6" name="page four.1" tags="" position="925,807" size="100,100">dude... why did you search for that?
+]</tw-passagedata><tw-passagedata pid="6" name="page 4.1" tags="" position="925,807" size="100,100">dude... why did you search for that?
 that was weird.
 like, really weird.
 
 .... but did you take the quiz?
-[[yes, i had to know..-&gt;page 4.2]]
-[[uhhh... no-&gt;page 4.2.1]]</tw-passagedata><tw-passagedata pid="7" name="page 4.2" tags="" position="849,957" size="100,100">so? what were the results?
+[[yes, i had to know..-&gt;page 4.2.1]]
+[[uhhh... no-&gt;page 4.2.2]]</tw-passagedata><tw-passagedata pid="7" name="page 4.2.1" tags="" position="849,957" size="100,100">so? what were the results?
 [[i got a yes-&gt;page 4.3.1]]
-[[i got a no-&gt;page 4.3.2.]]</tw-passagedata><tw-passagedata pid="8" name="page 4.2.1" tags="" position="1000,957" size="100,100">so you took the quiz,
+[[i got a no-&gt;page 4.3.2.]]</tw-passagedata><tw-passagedata pid="8" name="page 4.2.2" tags="" position="1000,957" size="100,100">so you took the quiz,
 but you cleared your search history after?
 
 i get it. your secret is safe with me.
 ... so what were your results?
-[[i didn&#39;t take the quiz!!-&gt;page 4.3.2]]
-[[it said yes...-&gt;page 4.3.3.]]</tw-passagedata><tw-passagedata pid="9" name="page 4.3.1" tags="" position="775,1107" size="100,100">uh. woah. okay so...
+[[i didn&#39;t take the quiz!!-&gt;page 4.3.3]]
+[[it said yes...-&gt;page 4.3.4]]</tw-passagedata><tw-passagedata pid="9" name="page 4.3.1" tags="" position="775,1107" size="100,100">uh. woah. okay so...
 never tell anyone that.
 just gonna repress that memory.
-[[moving on.]]</tw-passagedata><tw-passagedata pid="10" name="page 4.3.2." tags="" position="925,1107" size="100,100">oh, thank God.
+[[moving on..-&gt;page 5]]</tw-passagedata><tw-passagedata pid="10" name="page 4.3.2." tags="" position="925,1107" size="100,100">oh, thank God.
 mom would be so proud..
 .. if she knew. but she won&#39;t.
 just gonna repress this memory.
-[[moving on.]]</tw-passagedata><tw-passagedata pid="11" name="page 4.3.2" tags="" position="1045,1107" size="100,100">denial isn&#39;t just a river in Africa, you know...
+[[moving on..-&gt;page 5]]</tw-passagedata><tw-passagedata pid="11" name="page 4.3.3" tags="" position="1045,1107" size="100,100">denial isn&#39;t just a river in Africa, you know...
 but whatever you say!
 just gonna repress this memory.
-[[moving on.]]</tw-passagedata><tw-passagedata pid="12" name="page 4.3.3." tags="" position="1165,1107" size="100,100">uh. woah. okay so...
+[[moving on..-&gt;page 5]]</tw-passagedata><tw-passagedata pid="12" name="page 4.3.4" tags="" position="1165,1107" size="100,100">uh. woah. okay so...
 never tell anyone that.
 just gonna repress that memory.
-[[moving on.]]</tw-passagedata><tw-passagedata pid="13" name="moving on." tags="" position="1165,1257" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+[[moving on..-&gt;page 5]]</tw-passagedata><tw-passagedata pid="13" name="page 5" tags="" position="774,1257" size="100,100">{(set: $chapterAge to 13)
+&lt;!-- formula for year during passage --&gt;
+(set: $chapterYear to ($chapterAge + $birthYearInput))
+(if: $sex is &quot;Female&quot;)[
+(set: $pronoun to &quot;she&quot;)
+(set: $adjective to &quot;prettiest&quot;)
+(set: $desc to &quot;girl&quot;)
+(set: $pronounPlural to &quot;her&quot;)]
+(else:)[
+(set: $pronoun to &quot;he&quot;)
+(set: $adjective to &quot;most handsome&quot;)
+(set: $desc to &quot;boy&quot;)
+(set: $pronounPlural to &quot;his&quot;)]}
+you&#39;re $chapterAge years old
+the year is $chapterYear
+
+you&#39;re still playing matchmaker with the yearbook
+and you hate your name,
+but you love the way it sounds
+when $pronoun says it
+
+$pronoun being your best friend
+who you spend all your time with
+and is the $adjective $desc
+you&#39;ve ever seen
+
+what&#39;s $pronounPlural name?
+
+(input-box:2bind $bestie,&quot;XXX======&quot;,1)
+[[continue-&gt;page 5.1]]
+</tw-passagedata><tw-passagedata pid="14" name="page 5.1" tags="" position="773,1408" size="100,100">{(if: $sex is &quot;Female&quot;)[
+(set: $partner to &quot;boyfriend&quot;)
+(set: $sameGender to &quot;girls&quot;)
+(set: $oppositePronoun to &quot;him&quot;)]
+(else:)[
+(set: $partner to &quot;girlfriend&quot;)
+(set: $sameGender to &quot;boys&quot;)
+(set: $oppositePronoun to &quot;her&quot;)]}
+$bestie got a $partner.
+are you jealous?
+
+[[of $bestie?! of course!! i want a $partner, too! all the $sameGender have one!-&gt;page 5.2]]
+[[... i think i might be jealous of $oppositePronoun..-&gt;page 5.3]]</tw-passagedata><tw-passagedata pid="15" name="page 5.2" tags="" position="700,1563" size="100,100">{(if: $sex is &quot;Female&quot;)[
+(set: $oppositeGender to &quot;boys&quot;)]
+(else:)[
+(set: $oppositeGender to &quot;girls&quot;)]}
+well, mom says you&#39;re probably too young for a $partner anyway.
+it&#39;s okay, your time will come!
+.. at least that&#39;s what everyone says!
+and i do mean &#39;&#39;everyone&#39;&#39;.
+[[i guess it will.. i don&#39;t really think about $oppositeGender in that way anyway ..at least not when i&#39;m alone..-&gt;page 6.1]]</tw-passagedata><tw-passagedata pid="16" name="page 5.3" tags="" position="849,1558" size="100,100">..go on.
+(force-input-box:&quot;=XXXXXX=&quot;,2,&quot;well, you know.. they get to be together now.. so what does that mean for me?? for us?!&quot;)
+[[continue-&gt; page 6.2]]</tw-passagedata><tw-passagedata pid="17" name="page 3.1" tags="" position="903,506" size="100,100">{(if:$sex is &quot;Female&quot;)[
+(set: $gender to &quot;girl&quot;)
+(set: $oppositePronoun to &quot;he&quot;)]
+(else:)[
+(set: $gender to &quot;boy&quot;)
+(set: $oppositePronoun to &quot;she&quot;)]}
+you and every other $gender at school!
+[[continue-&gt;page 4]]</tw-passagedata><tw-passagedata pid="18" name="page 6.1" tags="" position="700,1708" size="100,100">... okay then, someone&#39;s thinking out loud again.
+that&#39;s something for 22 year old $name to think about.
+for now, let&#39;s focus on getting to high school.
+[[right. high school, right around the corner..-&gt;page 7]]</tw-passagedata><tw-passagedata pid="19" name="page 7" tags="" position="700,1860" size="100,100">{(set: $chapterAge to 16)
+&lt;!-- formula for year during passage --&gt;
+(set: $chapterYear to ($chapterAge + $birthYearInput))
+(if: $sex is &quot;Female&quot;)[
+(set: $adjective to &quot;beautiful&quot;)
+(set: $gender to &quot;young lady&quot;)
+(set: $oppositeGender to &quot;boy&quot;)
+(set: $sameGender to &quot;women&quot;)
+(set: $samePronoun1 to &quot;her&quot;)
+(set: $samePronoun to &quot;she&quot;)
+(set: $oppositePronoun1 to &quot;he&quot;)]
+(else:)[
+(set: $adjective to &quot;handsome&quot;)
+(set: $gender to &quot;young man&quot;)
+(set: $oppositeGender to &quot;girl&quot;)
+(set: $sameGender to &quot;men&quot;)
+(set: $samePronoun1 to &quot;him&quot;)
+(set: $samePronoun to &quot;he&quot;)
+(set: $oppositePronoun1 to &quot;she&quot;)]}
+
+you&#39;re $chapterAge years old
+the year is $chapterYear
+
+new school, new best friend
+and $samePronoun is the most $adjective $gender
+you’ve ever seen
+but you don’t tell $samePronoun1
+
+because &#39;&#39;you’re not gay&#39;&#39;
+you just write //really// gay poetry
+and daydream about what could’ve been
+in a world where you could date $sameGender
+without stares from framily and friends
+
+$samePronoun encourages you to go on a date with $oppositePronoun
+the annoying $oppositeGender from math class
+
+$oppositePronoun1 wants to kiss you at the park
+underneath your favorite tree
+this moment //should be// picture perfect
+like something out of a movie
+
+//“do you want to?”
+//you don’t.
+do you?
+
+[[i do!-&gt;page 8.1]]
+[[i mean... not really?-&gt;page 8.1.2]]</tw-passagedata><tw-passagedata pid="20" name=" page 6.2" tags="" position="849,1708" size="100,100">there is no &quot;us&quot;, remember?
+$bestie is your best friend.
+besides, that&#39;s something for 22 year old $name to think about.
+for now, let&#39;s focus on getting to high school.
+[[right. high school, right around the corner..-&gt;page 7]]</tw-passagedata><tw-passagedata pid="21" name="page 8.1.2" tags="" position="860,2003" size="100,100">{(if: $sex is &quot;Female&quot;)[
+(set: $pluralGender to &quot;girls&quot;)
+(set: $oppositePronoun to &quot;he&quot;)
+(set: $oppositePronoun2 to &quot;him&quot;)]
+(else:)[
+(set: $pluralGender to &quot;boys&quot;)
+(set: $oppositePronoun to &quot;she&quot;)
+(set: $oppositePronoun2 to &quot;her&quot;)]}
+you don&#39;t want to,
+but you do it anyway.
+because that&#39;s what straight $pluralGender do, right?
+[[...right. and i guess, $oppositePronoun&#39;s cute enough and my mom likes $oppositePronoun2, so... that should be enough? right? -&gt;page 8.3]]</tw-passagedata><tw-passagedata pid="22" name="page 8.1" tags="" position="581,2009" size="100,100">{(if: $sex is &quot;Female&quot;)[
+(set: $oppositePronoun to &quot;he&quot;)
+(set: $action to &quot;push him&quot;)]
+(else:)[
+(set: $oppositePronoun to &quot;she&quot;)
+(set: $action to &quot;back&quot;)]}
+$oppositePronoun leans in to kiss you,
+and you $action away.
+on second thought...
+maybe you don&#39;t actually want this?
+[[maybe...but.. i thought i did?-&gt;page 8.2.1]]</tw-passagedata><tw-passagedata pid="23" name="page 8.3" tags="" position="859,2153" size="100,100">{(if: $sex is &quot;Female&quot;)[
+(set: $oppositePronoun to &quot;he&quot;)
+(set: $action to &quot;push him&quot;)
+(set: $oppositePronoun2 to &quot;him&quot;)]
+(else:)[
+(set: $oppositePronoun to &quot;she&quot;)
+(set: $action to &quot;back&quot;)
+(set: $oppositePronoun2 to &quot;her&quot;)]}
+right.
+except.. it isn&#39;t enough.
+
+$oppositePronoun leans in to kiss you,
+and you $action away.
+on second thought...
+maybe you don&#39;t actually want this?
+yeah you... definitely don&#39;t want this, at all.
+
+but you don&#39;t know how to say that.
+so you avoid $oppositePronoun2 in the hallways,
+and pray you won&#39;t see $oppositePronoun2 again after graduation day.
+[[continue-&gt;page 8.4]]</tw-passagedata><tw-passagedata pid="24" name="page 8.2.1" tags="" position="579,2160" size="100,100">{(if: $sex is &quot;Female&quot;)[
+(set: $oppositeGender to &quot;guy&quot;)
+(set: $oppositePronoun to &quot;he&quot;)
+(set: $oppositePronoun2 to &quot;him&quot;)]
+(else:)[
+(set: $oppositeGender to &quot;girl&quot;)
+(set: $oppositePronoun to &quot;she&quot;)
+(set: $oppositePronoun2 to &quot;her&quot;)]}
+well,
+you chickened out.
+and now $oppositePronoun&#39;s //really// annoyed.
+because you&#39;ve done this with $oppositePronoun2 before,
+three times, actually.
+what gives?
+[[i.. i don&#39;t know. maybe i just don&#39;t like $oppositePronoun2 enough. but that&#39;s okay, right? right. $oppositePronoun just wasn&#39;t the right $oppositeGender for me.-&gt;page 8.4]]</tw-passagedata><tw-passagedata pid="25" name="page 8.4" tags="" position="579,2310" size="100,100">{(set: $chapterAge to 20)
+&lt;!-- formula for year during passage --&gt;
+(set: $chapterYear to ($chapterAge + $birthYearInput))
+(if: $sex is &quot;Female&quot;)[
+(set: $oppositeGender to &quot;man&quot;)
+(set: $oppositePronoun to &quot;he&quot;)
+(set: $oppositePronoun2 to &quot;him&quot;)]
+(else:)[
+(set: $oppositeGender to &quot;woman&quot;)
+(set: $oppositePronoun to &quot;she&quot;)
+(set: $oppositePronoun2 to &quot;her&quot;)]}
+you&#39;re $chapterAge years old
+the year is $chapterYear
+
+your time came!
+
+you&#39;ve been in a long-term relationship
+for more than 2 years.
+with a $oppositeGender who seems more like a best friend
+than a lover.
+
+but.. you remember what it was like
+to have a best friend that you cared so
+deeply, passionately, endlessly for,
+~~someone you felt so madly in love with,~~
+that you would do anything for them.
+
+and yet.. this feels nothing like that.
+it feels like the opposite, actually.
+
+you searched for butterflies when you were around $oppositePronoun2,
+but all you found was moths.
+
+when you finally dumped $oppositePronoun2,
+$oppositePronoun said $oppositePronoun&#39;d never be enough for you anyway
+what does that even mean?
+and where do you go from here?
+[[..google?-&gt;the google search]]
+[[try again-&gt;try again]]</tw-passagedata><tw-passagedata pid="26" name="the google search" tags="" position="504,2460" size="100,100">your trusty old friend, huh?
+looks like they&#39;ve had an upgrade since the last time we were here.
+so.. what are you searching for this time?
+&lt;div id=&quot;flex-container&quot;&gt;
+	&lt;img src=&quot;./img/google-modern.png&quot; width=&quot;50%&quot;&gt;
+	(force-input-box: &quot;X=&quot;, 1, &quot;how do i know if i&#39;m a lesbian?&quot;)
+	&lt;div id=&quot;button-container&quot;&gt;
+	  &lt;button&gt;[[search-&gt;the lesbian master doc]]&lt;/button&gt;&lt;button&gt;[[i&#39;m feeling lucky-&gt;the lesbian master doc]]&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="try again" tags="" position="1122,2483" size="100,100">{(if: $sex is &quot;Female&quot;)[
+(set: $oppositePronoun2 to &quot;him&quot;)]
+(else:)[
+(set: $oppositePronoun2 to &quot;her&quot;)]}
+are you sure?
+[[yes, i want to try again-&gt;start]]
+[[i guess i&#39;ll stay with $oppositePronoun2..-&gt;game over]]</tw-passagedata><tw-passagedata pid="28" name="game over" tags="" position="689,2623" size="100,100">&#39;&#39;GAME OVER.&#39;&#39;
+CONGRATULATIONS ON IGNORING YOUR INNER VOICE IN ORDER TO CONFORM TO SOCIETY!
+&amp;hearts;&amp;hearts;&amp;hearts;&amp;hearts;&amp;hearts;</tw-passagedata><tw-passagedata pid="29" name="the lesbian master doc" tags="" position="438,2632" size="100,100">you found... (link: &quot;the lesbian masterdoc&quot;)[(open-url: &#39;https://docdroid.net/N46Ea3o/copy-of-am-i-a-lesbian-masterdoc-pdf&#39;)].
+the first line stands out to you right away..
+&#39;&#39;What is Compulsory Heterosexuality?&#39;&#39;
+well... what is it?
+[[find out-&gt;comp het definition]]</tw-passagedata><tw-passagedata pid="30" name="comp het definition" tags="" position="438,2782" size="100,100">//&#39;&#39;Compulsory heterosexuality is the voice in my head that says I must really be het even when I’m in love with a woman. Compulsory heterosexuality is what forces lesbians to struggle through learning the difference between what you’ve been taught you want (being with men) and what you do want (being with women), which is why so many lesbians have dated men at some point.
+
+So… what happens if you want to be with women? What happens if you’re not attracted to men at all? When you’re trained from childhood to see romantic/sexual relationships with men - and only men - as major life goals, how do you separate that from what you want?&#39;&#39;//
+
+[[continue-&gt;comp het continued]]</tw-passagedata><tw-passagedata pid="31" name="comp het continued" tags="" position="438,2932" size="100,100">so basically..
+it&#39;s the moths.
+you look down at your stomach,
+and you feel relief.
+
+you can finally put a name
+to the feeling that made you feel like a monster
+devouring everything in its&#39; path
+only to end up feeling insatiable
+
+and maybe, just maybe
+this whole time,
+you weren&#39;t the problem
+society was
+
+.. so what now?
+
+(force-input-box:2bind $happyEnding,&quot;XX=&quot;,&quot;figure out how to unlearn these behaviors so that i can finally be... happy?&quot;)
+[[continue-&gt;happy ending]]</tw-passagedata><tw-passagedata pid="32" name="happy ending" tags="" position="438,3082" size="100,100">//&#39;&#39;$happyEnding&#39;&#39;//
+
+that sounds amazing!!
+i&#39;m so proud of you, $name.
+good luck finding your happy ending, babe.
+&amp;hearts;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
